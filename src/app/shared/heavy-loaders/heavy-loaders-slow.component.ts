@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HeavyLoadersSlowComponent {
 
+  constructor(){
+    const start = Date.now();
+    while(Date.now() - start < 3000 ){
+
+    }
+    console.log('Heavy Loaders Slow Component');
+  }
+
 }
