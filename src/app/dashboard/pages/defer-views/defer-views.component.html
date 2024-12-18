@@ -1,1 +1,25 @@
-<p>defer-views works!</p>
+
+<app-title title="Heavy Loaders Slow"></app-title>
+
+
+<section class="grid grid-cols-1">
+  @defer (on viewport) {
+    <app-heavy-loaders-slow cssClas="bg-blue-500" ></app-heavy-loaders-slow>
+  }@placeholder {
+    <p class="h-[600px] w-full bg-gradient-to-r from-gray-200 to-gray-400 animate-pulse"> cargando... </p>
+  }
+
+  @defer (on idle) {
+    <app-heavy-loaders-slow cssClas="bg-green-500" ></app-heavy-loaders-slow>
+  }@placeholder {
+    <p class="h-[600px] w-full bg-gradient-to-r from-gray-200 to-gray-400 animate-pulse"> cargando... </p>
+  }
+
+  @defer (on viewport) {
+    <app-heavy-loaders-slow cssClas="bg-purple-500" ></app-heavy-loaders-slow>
+  }@placeholder {
+    <p class="h-[600px] w-full bg-gradient-to-r from-gray-200 to-gray-400 animate-pulse"> cargando... </p>
+  }
+
+
+</section>
