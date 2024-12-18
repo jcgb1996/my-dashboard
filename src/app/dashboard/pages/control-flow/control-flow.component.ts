@@ -1,11 +1,14 @@
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { TitleComponent } from '@shared/title/title.component';
 
 
 type Grade = 'A'|'B'|'F';
 
 @Component({
   selector: 'app-control-flow',
-  imports: [],
+  imports: [RouterModule, TitleComponent],
   templateUrl: './control-flow.component.html',
 })
 export default class ControlFlowComponent {
